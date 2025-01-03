@@ -63,19 +63,17 @@ svg {
 
   img {
     background-color: var(--Very--Dark--Blue);
-    border-radius: 10px;
-    padding: 1rem;
+    border-radius: 12px;
+    padding: 16px;
     cursor: pointer;
     transition: scale 0.2s ease-in-out;
 
     &:first-child {
-      width: 45px;
-      height: auto;
+      height: 54px;
     }
 
     &:last-child {
-      width: 50px;
-      height: 45px;
+      height: 52px;
     }
 
     &:hover {
@@ -165,24 +163,32 @@ input[type="range"]::-webkit-slider-thumb {
   z-index: 1;
   position: absolute;
   bottom: -3rem;
-  right: 6rem;
+  right: 3rem;
 
   p {
     color: black;
     font-weight: bold;
     font-size: 3rem;
+
+    &::selection {
+      background-color: yellow;
+    }
   }
 
   p:last-child {
     font-size: 1rem;
     opacity: 50%;
+
+    &::selection {
+      background-color: beige;
+    }
   }
 }
 
 @media (min-width: 768px) {
   body {
     background: url(bg-desktop.png) no-repeat bottom;
-    background-size: fill;
+    background-size: contain;
     background-color: var(--Very--Dark--Blue);
   }
 
@@ -200,16 +206,13 @@ input[type="range"]::-webkit-slider-thumb {
     text-align: left;
     width: 400px;
   }
+
+  #left {
+    right: 6rem;
+  }
 }
 
-/* 
-  } */
-
 @media (min-width: 950px) {
-  /* .box {
-    padding: 2rem 2rem 1rem;
-  } */
-
   #right-down {
     width: 550px;
     padding-bottom: 3rem;
@@ -229,7 +232,7 @@ input[type="range"]::-webkit-slider-thumb {
       z-index: 2;
       position: relative;
 
-      bottom: -3.6rem;
+      bottom: -3.4rem;
       right: -2rem;
     }
   }
